@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <h1>jQuery.ajax()</h1>
+        <div id="display-resources">
+            <p>jQuery example using <a href="http://api.jquery.com/jquery.ajax/">jQuery.</a>
+                JavaScript Training Resources.</p>
+                </div>
+                <!--<a href="#" class="btn btn-primary" id="retrieve-resources">Retrieve List</a>-->
+                <script>
+                    $(document).ready(function () {
+
+                        $.ajax({
+                            type: "GET",
+                            url: "ajaxfile.json",
+                            success: function (result) {
+                                console.log(result);
+                                var output = 
+                                "<table><thead><tr><th>Name</th><th>Provider</th><th>URL</th><thead></table>"
+                                    for (var i in result) {
+                                        output +=
+                                        "<tr><td>" +
+                                            result[i].name +
+                                        "</tr></td>" +
+                                        "<tr><td>" +
+                                            result[i].provider +
+                                        "</tr></td>"
+                                        "<tr><td>" +
+                                            result[i].url +
+                                        "</tr></td>";
+                                    }
+                                    console.log(output)
+                                    // output +- "</tbody></table>"';
+
+                                    // $('#display=resources').html(output);
+
+                            }
+                    });
+                });
+                </script>
+    </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="display-resources">
+    <p>jQuery <a href="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> jQuery.ajax()</a>      "</p>
+JS </p>
+</div>
+ <script>
+     
+ </script>
+ </html>
